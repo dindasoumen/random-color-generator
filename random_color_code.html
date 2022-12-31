@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>random color code generation</title>
+    <style type="text/css">
+    *{
+    margin:0;
+    padding:0;
+    box-sizig:border-box;
+    }
+    body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:;}
+    
+    .main{
+    font-weight:bold;
+    text-align:center;
+    color:white;
+    background:;
+    margin-top:50%;
+    padding:5px;
+    background:;
+    height:70px;
+    width:50%;
+    border-radius:5px;}
+    body{
+    transition:1s;}
+    .main button{
+    transition:;
+    margin-top:10px;
+    width:100%;
+    background:black;
+    color:white;
+    font-weight:bold;
+    font-size:1rem;
+    border:none;
+    border-radius:5px;
+    padding:5px;}
+    #btn{
+    animation: button 1s linear infinite;
+    } 
+    @keyframes button{
+    50%{
+    color:transparent;
+    }
+    
+    
+   {
+    text-align:center;
+    width:;
+    background:;
+    color:white;
+    
+    font-size:5rem;
+    border:;
+    border-radius:;
+    padding:5px;
+    }
+    
+    button:focus{
+   
+    outline:none;}
+    </style></head>
+    <body>
+       <div class="main">
+           <p id="p">#fff</p>
+           <button id="btn">click here
+           </button>
+       </div>
+       
+       <script type="text/javascript">
+         function my_fun(){
+         var randnumber = Math.floor(Math.random()*16777215);
+         var randcode = "#"+ randnumber.toString(16);
+         document.body.style.backgroundColor = randcode;
+         document.getElementById("p").innerHTML = randcode;
+         
+         navigator.clipboard.writeText(randcode);
+       }
+       document.getElementById("btn").addEventListener("click", my_fun);
+       
+       
+       
+       </script>
+     </body>
+</html>
